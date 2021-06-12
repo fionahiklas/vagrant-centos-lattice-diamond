@@ -10,3 +10,7 @@
 
 # Package files
 *.rpm
+
+# Vagrant
+.vagrant
+

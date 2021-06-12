@@ -20,6 +20,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     echo "Starting install"
-    
+    yum upgrade -y
+    yum install -y /vagrant/diamond_3_12-base-240-2-x86_64-linux.rpm    
   SHELL
 end
