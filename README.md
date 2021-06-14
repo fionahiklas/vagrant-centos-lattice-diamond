@@ -2,6 +2,13 @@
 
 ## Overview
 
+## Getting Started
+
+### Prerequisites 
+
+* [Vagrant](https://www.vagrantup.com)
+* [VirtualBox](https://www.virtualbox.org)
+
 
 
 ## References
