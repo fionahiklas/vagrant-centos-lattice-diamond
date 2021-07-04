@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
 
   # Hack the ethernet address to be the same
-  config.vm.network :bridged, :mac => "5254004d77d3"
+  config.vm.network "public_network", :mac => "5254004d77d3"
   
   config.vm.network "forwarded_port", guest: 8080, host: 9001
   # config.vm.network "private_network", ip: "192.168.33.10"
@@ -26,5 +26,6 @@ Vagrant.configure(2) do |config|
     yum upgrade -y
     yum install -y net-tools libSM libXrender xterm emacs
     yum install -y /vagrant/diamond_3_12-base-240-2-x86_64-linux.rpm
+    cp /vagrant/lisense.dat /usr/local/diamond/3.12/license/
   SHELL
 end
